@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player Show Page</title>
+</head>
+<body>
+    <h1>
+        <%= player.name %>
+    </h1>
+    <h2>
+        Jersey Number - <%= player.jerseyNumber %>
+    </h2>
+    <% if (player.isAllStar) { %>
+        <h3> All-Star Caliber Player!</h3>
+        <% } else { %>
+            <h3>This Player is Not an Allstar!</h3>
+            <% } %>
+
+            <form action="/players/<%=player._id%>?_method=DELETE" method="POST">
+                <button type="submit">Delete <%= player.name %></button>
+            </form>
+            <a href="/players/<%= player._id %>/edit">Edit <%= player.name %></a>
+            <a href="/players">Back to NBA Players</a>
+</body>
+</html>

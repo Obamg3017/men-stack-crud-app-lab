@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add a New Player</title>
+</head>
+<body>
+    
+    <h1>Add A New Player</h1>
+    <form action="/players" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" />
+    
+        <label for="isAllStar">NBA AllStar?</label>
+        <input type="checkbox" name="isAllStar" id="isAllStar" />
+    
+        <button type="submit">Add An NBA Player Of Your Choice</button>
+        </form>
+        <a href="/players/">Go Back To Players</a>
+
+</body>
+</html>
